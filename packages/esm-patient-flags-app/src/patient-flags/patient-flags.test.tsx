@@ -16,9 +16,9 @@ describe('<PatientFlags/>', () => {
   });
 
   test('should display patient flags', () => {
-    mockUsePatientFlags.mockReturnValue({ isLoading: false, patientFlags: ['hiv', 'cancer'], error: null });
+    mockUsePatientFlags.mockReturnValue({ isLoading: false, patientFlags: ['arv_regimen', 'cancer'], error: null });
     render(<PatientFlags patientUuid="some-patient-uuid" />);
-    expect(screen.getByText(/^hiv$/i)).toBeInTheDocument();
+    expect(screen.getByText(/^arv_regimen$/i)).toBeInTheDocument();
     expect(screen.getByText(/^cancer$/i)).toBeInTheDocument();
   });
 });

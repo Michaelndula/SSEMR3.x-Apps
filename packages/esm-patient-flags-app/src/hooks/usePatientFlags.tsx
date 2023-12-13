@@ -14,7 +14,7 @@ interface PatientFlagsReturnType {
  * @returns An array of patient identifiers
  */
 export const usePatientFlags = (patientUuid: string): PatientFlagsReturnType => {
-  const patientFlagsUrl = `https://ssemr.intellisoftkenya.com/openmrs/module/patientflags/findFlaggedPatients.form?flagId=1?patientUuid=${patientUuid}`;
+  const patientFlagsUrl = `http://localhost/openmrs/module/patientflags/findFlaggedPatients.form?flagId=1?patientUuid=${patientUuid}`;
   const { data, mutate, error, isLoading } = useSWR<{ data: { results: Array<string> } }>(
     patientFlagsUrl,
     openmrsFetch,
