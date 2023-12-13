@@ -1,0 +1,6 @@
+@use '@carbon/styles/scss/spacing';
+@import '~@openmrs/esm-styleguide/src/vars';
+
+.flagContainer {
+    margin: spacing.$spacing-05;
+}
